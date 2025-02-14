@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.hero {
+  background-image: url('/images/Rectangle 23.png'); /* Add your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 0; /* Example padding */
+  text-align: center; /* Center the text */
+  color: white; /* Example text color */
+  height: 500px;
+}
