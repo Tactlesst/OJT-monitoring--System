@@ -32,7 +32,7 @@ const BackToTop = () => {
         display: isVisible ? 'block' : 'none', // Show or hide the button
       }}
     >
-      ↑ Back to Top
+      ↑
     </button>
   );
 };
