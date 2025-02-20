@@ -10,15 +10,11 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 const Body = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [loadingMessage, setLoadingMessage] = useState('Loading...'); // Initial message
-
+  const [loadingMessage, setLoadingMessage] = useState('Loading...'); 
   useEffect(() => {
-    // Simulate loading (replace with your actual loading logic)
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
-
-    // Change loading message periodically (optional)
     const messages = [
       'Loading...',
       'Fetching data...',
@@ -30,12 +26,12 @@ const Body = () => {
     let messageIndex = 0;
     const messageInterval = setInterval(() => {
       setLoadingMessage(messages[messageIndex]);
-      messageIndex = (messageIndex + 1) % messages.length; // Cycle through messages
-    }, 500); // Change message every 0.5 seconds
+      messageIndex = (messageIndex + 1) % messages.length; 
+    }, 500); 
 
     return () => {
       clearTimeout(timer);
-      clearInterval(messageInterval); // Clear interval when component unmounts
+      clearInterval(messageInterval);
     };
   }, []);
 
